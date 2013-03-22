@@ -1,15 +1,14 @@
 # CyanogenMod Extras
 
 on init
-    export ANDROID_CACHE /data
+    export ANDROID_CACHE /cache
     export TERMINFO /system/etc/terminfo
     export TERM linux
 
 on post-fs-data
-    mkdir /data/dalvik-cache 0771 system system
-    chown system system /data/dalvik-cache
-    chmod 0771 /data/dalvik-cache
-    symlink /data/dalvik-cache /cache/dalvik-cache
+    mkdir /cache/dalvik-cache 0771 system system
+    chown system system /cache/dalvik-cache
+    chmod 0771 /cache/dalvik-cache
 
 on boot
     # Run sysinit
