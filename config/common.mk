@@ -132,6 +132,7 @@ PRODUCT_COPY_FILES += \
 # Copy Prebuilt goomanager
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/goo/goomanager.apk:system/app/goomanager.apk
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
@@ -232,6 +233,11 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION)
+
+# Common GooManager build properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.board=$(CM_BUILD) \
+    ro.goo.version=$(shell date +%Y%m%d%H%M%S)
 
 
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
