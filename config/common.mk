@@ -129,6 +129,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# Copy Prebuilt goomanager
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/goo/goomanager.apk:system/app/goomanager.apk
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
