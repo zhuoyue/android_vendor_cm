@@ -237,7 +237,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common GooManager build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.board=$(CM_BUILD) \
-    ro.goo.version=$(shell date +%Y%m%d%H%M%S)
+    ro.goo.version=$(shell date +%s)
 
 
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
